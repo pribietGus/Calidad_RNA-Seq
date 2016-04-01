@@ -1,0 +1,11 @@
+PASS	Basic Statistics	Trimmed_Partial_SRR2467143.fastq
+PASS	Per base sequence quality	Trimmed_Partial_SRR2467143.fastq
+PASS	Per sequence quality scores	Trimmed_Partial_SRR2467143.fastq
+WARN	Per base sequence content	Trimmed_Partial_SRR2467143.fastq
+PASS	Per base GC content	Trimmed_Partial_SRR2467143.fastq
+PASS	Per sequence GC content	Trimmed_Partial_SRR2467143.fastq
+PASS	Per base N content	Trimmed_Partial_SRR2467143.fastq
+PASS	Sequence Length Distribution	Trimmed_Partial_SRR2467143.fastq
+PASS	Sequence Duplication Levels	Trimmed_Partial_SRR2467143.fastq
+PASS	Overrepresented sequences	Trimmed_Partial_SRR2467143.fastq
+FAIL	Kmer Content	Trimmed_Partial_SRR2467143.fastq
