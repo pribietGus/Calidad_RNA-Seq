@@ -1,0 +1,248 @@
+---
+title: "Calidad_RNA_seq"
+author: "MGAZ"
+date: "31 de marzo de 2016"
+output: html_document
+---
+Criterios y comandos
+===============================
+## Comandos generales
+Partiendo de la descompresión y previo a analizar cada secuencia se revisara la calidad de todas las secuencias en el archivo descargado *FastQC_Short.tar.gz* usando el comando:
+```
+fastqc -O ./QUAL/ *.fastq 
+```
+## Ejemplo visto en clase (SRR2467141)
+Partiendo de la descompresión, se revisó la calidad de *Partial_SRR2467141.fastq* usando __FastQC__,una vez que el programa ha terminado la revisión se abre el archivo extensión .html
+```
+xdg-open ./QUAL/Partial_SRR2467141_fastqc/fastqc_report.html
+```
+Puesto que este es el ejemplo visto en clase de los datos se cortaran:  
+- Los adaptadores Illumina TruSeq single end (SE) del extremo 3’  
+- Los primeros 10 nucleótidos del 5’  
+- Bases de mala calidad usando una ventana de 4 nucleótidos con un promedio mínimo de Phred de 15  
+- Secuencias menores a 60 nucleótidos.  
+
+Para ello es necesario crear los *symlink* a las secuencias de adaptadores que ya contiene __Trimmomatic__; después se correra el comando de __Trimmomatic__ y __FastQC__.
+```
+ln -s /home/gus/Trimmomatic-0.36/adapters/*fa .
+java -jar /home/gus/Trimmomatic-0.36/trimmomatic-0.36.jar SE Partial_SRR2467141.fastq Trimmed_Partial_SRR2467141.fastq ILLUMINACLIP:TruSeq3-SE.fa:2:30:10 HEADCROP:10 SLIDINGWINDOW:4:15 MINLEN:60
+fastqc -O ./QUAL/ Trimmed_Partial_SRR2467141.fastq
+```
+Al abrir el archivo .html producto del procesamiento de la secuencia se observa una mejoría en _Per base sequence content_ y en _Per base GC content_.
+```
+xdg-open ./QUAL/Trimmed_Partial_SRR2467141_fastqc/fastqc_report.html 
+```
+### Algunas notas
+Es de resaltar que que la modificación en el _Per base GC content_ se debe muy probablemente al adaptador en 5' que muy seguramente es rico en GC para aumentar la temperatura de disociación en el proceso de PCR. Finalmente el _Sequence Length Distribution_ se ve reducido por el corte de 10 nucleótidos en el extremo 5' más aparte la perdida de los adaptadores finalmente el pico se desplaza porque las secuencias menores a 60 nucleotidos fueron eliminadas.  
+  
+  
+## SRR2467142
+Primero se abrirá el archivo .html del **FastQC**
+```
+xdg-open ./QUAL/Partial_SRR2467142_fastqc/fastqc_report.html
+```
+Se puede observar que existen 3 pruebas que el archivo no pasó:  
+-Per base sequence content.  
+-Per base GC content.  
+-Kmer Content  
+  
+Como se observa en las gráficas de las secciones que no pasaron la mayor distorsión se encuentra en los primeros 9 nucleotidos, sin embargo para el _Base sequence content_ la distorsión llega aproximadamente a los 12 nucleotidos, por lo cual para el primer intento eliminaré los primeros 12 nucleótidos del extremo 5' de esta manera espero que las pruebas se regularicen más.
+Usando _Trimmomatic_ el comandó queda:
+```
+java -jar /home/gus/Trimmomatic-0.36/trimmomatic-0.36.jar SE Partial_SRR2467142.fastq Trimmed_Partial_SRR2467142.fastq HEADCROP:12 
+fastqc -O ./QUAL/ Trimmed_Partial_SRR2467142.fastq
+xdg-open ./QUAL/Trimmed_Partial_SRR2467142_fastqc/fastqc_report.html
+```
+Antes de eliminar los 12 nucleótidos se observaba en la tabla de la sección _Kmer Content_ que la mayoria de los Kmer estaban en los primeros núcleotidos, mi estrategía coincidió en mejorar la prueba al cortar los primeros 12 nucleótidos.
+  
+  
+## SRR2467143
+Primero se abrirá el archivo .html del **FastQC**
+```
+xdg-open ./QUAL/Partial_SRR2467143_fastqc/fastqc_report.html
+```
+Este archivo al igual que el pasado no tuvo 3 pruebas que no pasó:
+-Per base sequence content.  
+-Per base GC content.  
+-Kmer Content  
+
+Analizando las gráficas se observa que los problemas se deben al extremo 5' y al igual que el _SRR2467142_ el problema esta localizado en los primeros 12 nucleótidos, por lo tanto el _Trimmomatic_ sera muy similar.
+```
+java -jar /home/gus/Trimmomatic-0.36/trimmomatic-0.36.jar SE Partial_SRR2467143.fastq Trimmed_Partial_SRR2467143.fastq HEADCROP:12 
+fastqc -O ./QUAL/ Trimmed_Partial_SRR2467143.fastq
+xdg-open ./QUAL/Trimmed_Partial_SRR2467143_fastqc/fastqc_report.html
+```
+Después del _Trimmomatic_ no se logró pasar la prueba de _Kmer Content_, para ello intentaré usar una ventana de 4 nucleótidos con un Phred minimo de 10
+```
+java -jar /home/gus/Trimmomatic-0.36/trimmomatic-0.36.jar SE Partial_SRR2467143.fastq Trimmed_Partial_SRR2467143a.fastq HEADCROP:12 SLIDINGWINDOW:4:10
+fastqc -O ./QUAL/ Trimmed_Partial_SRR2467143a.fastq
+xdg-open ./QUAL/Trimmed_Partial_SRR2467143a_fastqc.html
+```
+Y así con la ventana se pasó la prueba de Kmers solamente aumentando la calidad.
+  
+  
+## SRR2467144
+Primero se abrirá el archivo .html del **FastQC**
+```
+xdg-open ./QUAL/Partial_SRR2467144_fastqc/fastqc_report.html
+```
+El archivo presenta problemas en 4 pruebas:   
+-Per base sequence content (X)  
+-Per base GC content (X)  
+-Per base sequence GC content (!)  
+-Kmer Content  
+  
+En la experiencia adquirida hasta ahora el _Per base sequence content_ se soluciona cortando en el extremo 5', en este caso se cortaran 12 nucleótidos. Al cortar los primeros 9 nucleótidos el _Per base GC content_ también se normalizará puesto que la distorsión se encuentra en los primeros 9 nucleótidos, simultáneamente la alarma en el _Per sequence GC content_ debería disminuir. Quizá el _Kmer content_ se normalice sino habría que hacer una ventana.
+```
+java -jar /home/gus/Trimmomatic-0.36/trimmomatic-0.36.jar SE Partial_SRR2467144.fastq Trimmed_Partial_SRR2467144.fastq HEADCROP:12 
+~/Escritorio/FastQC/fastqc /home/gus/Git/seq/FastQC_Short/Trimmed_Partial_SRR2467144.fastq -O /home/gus/Git/seq/FastQC_Short/QUAL/
+xdg-open ./QUAL/Trimmed_Partial_SRR2467144_fastqc.html
+```
+Todas la pruebas son aprobadas no hubo necesidad de aplicar una ventana para mejorar la prueba de _Kmer Content_.
+Finalmente me gustaría explicar el porqué cambié el comando para el FastQC, si uno se percata en el .html de la version "Trimmed" se dará cuenta que la versión de FastQC es la 0.11.5, mientras que la antes del Trimmed la versión es la 0.10.1.
+  
+  
+## SRR2467145
+Primero se abrirá el archivo .html del **FastQC**
+```
+xdg-open ./QUAL/Partial_SRR2467145_fastqc/fastqc_report.html
+```
+El archivo presenta problemas en 3 pruebas:   
+-Per base sequence content (X)  
+-Per base GC content (X)  
+-Kmer Content  
+
+Se procederá como se ha hecho hasta ahora escindiendo 12 nucleótidos del extremo 5', puesto que hasta ahora todos han presentado problemas en _Per base sequence content_ y _Per base GC content_ . Esto me suegiere que el problema es propio del método de secuenciación.
+```
+java -jar /home/gus/Trimmomatic-0.36/trimmomatic-0.36.jar SE Partial_SRR2467145.fastq Trimmed_Partial_SRR2467145.fastq HEADCROP:12 
+~/Escritorio/FastQC/fastqc /home/gus/Git/seq/FastQC_Short/Trimmed_Partial_SRR2467145.fastq -O /home/gus/Git/seq/FastQC_Short/QUAL/
+xdg-open ./QUAL/Trimmed_Partial_SRR2467145_fastqc.html
+```               
+Se pasaron todas las pruebas me gustaría destacar que el los fragmentos mayores a 84 ya presentan calidades menores.
+  
+  
+## SRR2467146
+Primero se abrirá el archivo .html del **FastQC**
+```
+xdg-open ./QUAL/Partial_SRR2467146_fastqc/fastqc_report.html
+```
+El archivo presenta problemas en 3 pruebas:   
+-Per base sequence content (X)  
+-Per base GC content (X)  
+-Kmer Content  
+
+Se procederá como se ha hecho hasta ahora escindiendo 12 nucleótidos del extremo 5', puesto que hasta ahora todos han presentado problemas en _Per base sequence content_ y _Per base GC content_ . En esta ocasión voy a usar una ventana para intentar corregir la región con fragmentos mayores a 95 donde algunos de ellos presentan un Phred en la zona roja. Intentaré que minimo estén en 18
+```
+java -jar /home/gus/Trimmomatic-0.36/trimmomatic-0.36.jar SE Partial_SRR2467146.fastq Trimmed_Partial_SRR2467146.fastq HEADCROP:12 SLIDINGWINDOW:4:18
+~/Escritorio/FastQC/fastqc /home/gus/Git/seq/FastQC_Short/Trimmed_Partial_SRR2467146.fastq -O /home/gus/Git/seq/FastQC_Short/QUAL/
+xdg-open ./QUAL/Trimmed_Partial_SRR2467146_fastqc.html
+```               
+El reporte del Trimmomatic indica la pérdida de 6 secuencias de las 5000 iniciales, lo interesante es que el resultado generó que en la gráfica de _Kmer Content_ apareciera un pico de Poli T, curiosamente dicha secuencia (TTTTTTT) no aparecía en el análisis previo.El contenido de GC disminuyó con respecto al inicial debido a que la región 5' que se cortó era rica en GC.
+  
+  
+## SRR2467147
+Primero se abrirá el archivo .html del **FastQC**
+```
+xdg-open ./QUAL/Partial_SRR2467147_fastqc/fastqc_report.html
+```
+El archivo presenta problemas en 4 pruebas:   
+-Per base sequence content (X)  
+-Per base GC content (X)  
+-Per sequence GC content (!)
+-Kmer Content  (X)
+
+El problema en el contenido de GC se espera que se solucioné al escindir 12 nucleótidos primeros en el extremo 5' como se ha venido haciendo y se ha asociado a algo intrinseco del método de secuenciación. Únicamente se plantea escindir y probar con una ventana de 4 nucleótidos con un Phred de 18 como la vez anterior, que se encuentra casi al final de la zona roja de los fragmentos más largos.
+```
+java -jar /home/gus/Trimmomatic-0.36/trimmomatic-0.36.jar SE Partial_SRR2467147.fastq Trimmed_Partial_SRR2467147.fastq HEADCROP:12 SLIDINGWINDOW:4:18
+~/Escritorio/FastQC/fastqc /home/gus/Git/seq/FastQC_Short/Trimmed_Partial_SRR2467147.fastq -O /home/gus/Git/seq/FastQC_Short/QUAL/
+xdg-open ./QUAL/Trimmed_Partial_SRR2467147_fastqc.html
+```               
+Debido a la ventana que puse algo estricta quizá la _Sequence Length Distribution_ se cargó a la derecha, puesto que las secuencias más largas tenían menor Phred y fueron eliminadas, haciendo que no existan datos a la derecha del pico.
+  
+  
+## SRR2467148
+Primero se abrirá el archivo .html del **FastQC**
+```
+xdg-open ./QUAL/Partial_SRR2467148_fastqc/fastqc_report.html
+```
+El archivo presenta problemas en 3 pruebas:   
+-Per base sequence content (X)  
+-Per base GC content (X)  
+-Kmer Content  (X)
+
+Como se ha venido haciendo se escindirán 12 nucleotidos del extremo 5', el cual es rico en GC y corregirá las 2 primeras pruebas, generalmente _Kmer Content_ se corrige por extensión, finalmente intaré usar una ventana un poco menos estricta para no observar que en la distribución, el pico se cargue tanto a la izquierda, ea pues que usaré un Phred de 15 que es un poco mejor que el menor Phred que aparece en la región de fragmentos más grandes en la gráfica _Per base sequence quality_
+```
+java -jar /home/gus/Trimmomatic-0.36/trimmomatic-0.36.jar SE Partial_SRR2467148.fastq Trimmed_Partial_SRR2467148.fastq HEADCROP:12 SLIDINGWINDOW:4:15
+~/Escritorio/FastQC/fastqc /home/gus/Git/seq/FastQC_Short/Trimmed_Partial_SRR2467148.fastq -O /home/gus/Git/seq/FastQC_Short/QUAL/
+xdg-open ./QUAL/Trimmed_Partial_SRR2467148_fastqc.html
+```
+Los problemas se resolvieron, apareció una alarma en _Sequence Length Distribution_ por la ventana que se ocupó, en realidad no esperaba que 15 fuera tan estricto que dejará sin cola derecha a la distribución.
+  
+  
+## SRR2467149
+Primero se abrirá el archivo .html del **FastQC**
+```
+xdg-open ./QUAL/Partial_SRR2467149_fastqc/fastqc_report.html
+```
+El archivo presenta problemas en 4 pruebas:   
+-Per base sequence content (X)  
+-Per base GC content (X)  
+-Per sequence GC content  
+-Kmer Content  (X)
+
+Se cortarán 10 nucleótidos en esta ocasión al parecer en _Per base sequence content_ las disrupciones se encuentran antes de 10 nucleótidos del extremo 5'. Es de esperar que la escisión solucione todos los problemas. Sin embargo me gustaría probar una ventana de 4 núcleotidos con un Phred más laxo, ahora intenaré usar un Phred menor que el minimo registrado en _Per base sequence quality_, el minimo que aparece es 14 usaré 12.
+```
+java -jar /home/gus/Trimmomatic-0.36/trimmomatic-0.36.jar SE Partial_SRR2467149.fastq Trimmed_Partial_SRR2467149.fastq HEADCROP:10 SLIDINGWINDOW:4:12
+~/Escritorio/FastQC/fastqc /home/gus/Git/seq/FastQC_Short/Trimmed_Partial_SRR2467149.fastq -O /home/gus/Git/seq/FastQC_Short/QUAL/
+xdg-open ./QUAL/Trimmed_Partial_SRR2467149_fastqc.html
+```
+Era de esperarse que la _Sequence Length Distribution_ perdiera la cola derecha al pico, y bueno esto nos permite teneer una mejor calidad general de las secuencias; por otra parte _Per sequence GC content_ aun marca una alarma pero yo lo adjudico a que la secuencia en general es rica en GC, casi el 60% de la secuencia es GC como se puede observar en _Per base sequence content_.
+  
+  
+## SRR2467150
+Primero se abrirá el archivo .html del **FastQC**
+```
+xdg-open ./QUAL/Partial_SRR2467150_fastqc/fastqc_report.html
+```
+El archivo presenta problemas en 3 pruebas:   
+-Per base sequence content (X)  
+-Per base GC content (X)  
+-Kmer Content  (!)
+
+Se cortarán los 12 primeros núcleotidos del extremo 5' que es la región de la gráfica en _Per base sequence content_ donde se observa que hay mayor disrupción, esto según se ha visto solucionaría todos los problemas. Por otra parte continuando con mis pruebas de ventanas me gustaría intentar una ventana más grande de 5 núcleótidos con un Phred de 12 que es menor que el minimo valor de Phred registrado en las secuencias mayores a 95 nucléotidos.
+```
+java -jar /home/gus/Trimmomatic-0.36/trimmomatic-0.36.jar SE Partial_SRR2467150.fastq Trimmed_Partial_SRR2467150.fastq HEADCROP:12 SLIDINGWINDOW:5:12
+~/Escritorio/FastQC/fastqc /home/gus/Git/seq/FastQC_Short/Trimmed_Partial_SRR2467150.fastq -O /home/gus/Git/seq/FastQC_Short/QUAL/
+xdg-open ./QUAL/Trimmed_Partial_SRR2467150_fastqc.html
+```
+Unicamente por comparar lo repetiré pero con una ventana de 4
+```
+java -jar /home/gus/Trimmomatic-0.36/trimmomatic-0.36.jar SE Partial_SRR2467150.fastq Trimmed_Partial_SRR2467150a.fastq HEADCROP:12 SLIDINGWINDOW:4:12
+~/Escritorio/FastQC/fastqc /home/gus/Git/seq/FastQC_Short/Trimmed_Partial_SRR2467150a.fastq -O /home/gus/Git/seq/FastQC_Short/QUAL/
+xdg-open ./QUAL/Trimmed_Partial_SRR2467150a_fastqc.html
+```
+No observo cambios destacables. Los problemas se solucionaron y surgió la alarma de la distribución de longitudes, porque muchas secuencias largas con Phreds malos se descartaron.
+
+
+## SRR2467151
+Primero se abrirá el archivo .html del **FastQC**
+```
+xdg-open ./QUAL/Partial_SRR2467151_fastqc/fastqc_report.html
+```
+El archivo presenta problemas en 3 pruebas:   
+-Per base sequence content (X)  
+-Per base GC content (X)  
+-Kmer Content  (!)
+
+Se cortarán 12 nucleótidos del extremo 5', y finalmente se usará una ventana de 4 nucleótidos con un Phred minimo de 12.
+```
+java -jar /home/gus/Trimmomatic-0.36/trimmomatic-0.36.jar SE Partial_SRR2467151.fastq Trimmed_Partial_SRR2467151.fastq HEADCROP:12 SLIDINGWINDOW:4:12
+~/Escritorio/FastQC/fastqc /home/gus/Git/seq/FastQC_Short/Trimmed_Partial_SRR2467151.fastq -O /home/gus/Git/seq/FastQC_Short/QUAL/
+xdg-open ./QUAL/Trimmed_Partial_SRR2467150a_fastqc.html
+```
+Se observa la perdida de la cola derecha al pico de distribución de longitud de secuencias, por la perdida de los fragmentos largos con bajo Phred, que eran los fragmentos de un tamaño superior a 95.
+
+#Conclusiones  
+-En general el proceso de secuenciamiento con Illumina genera porciones ricas en GC en el extremo 5', yo he sugerido que es una clase de adaptador o primer que se ocupa en el proceso de elongamiento de la secuencia.
+-Debido a esta porción inicial en el extremo 5' los archivos presentaban problemas en las pruebas de _Per base sequence content_,_Per base GC content_ y _Kmer Content_.
+-El Phred que se usa como _threshold_ en una ventana genera que en la distribución de longitudes se pierdan las secuencias más largas.
