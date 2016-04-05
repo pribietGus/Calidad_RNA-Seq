@@ -1,0 +1,522 @@
+segment_juncs v2.0.9 ()
+---------------------------
+[samopen] SAM header is present: 383 sequences.
+Loading reference sequences...
+	Loading TRINITY_DN343_c0_g1_i1...done
+	Loading TRINITY_DN306_c0_g1_i1...done
+	Loading TRINITY_DN322_c0_g1_i1...done
+	Loading TRINITY_DN318_c0_g1_i1...done
+	Loading TRINITY_DN347_c0_g1_i1...done
+	Loading TRINITY_DN336_c0_g1_i1...done
+	Loading TRINITY_DN334_c0_g1_i1...done
+	Loading TRINITY_DN325_c0_g1_i1...done
+	Loading TRINITY_DN310_c0_g1_i1...done
+	Loading TRINITY_DN313_c0_g1_i1...done
+	Loading TRINITY_DN308_c0_g1_i1...done
+	Loading TRINITY_DN320_c0_g1_i1...done
+	Loading TRINITY_DN309_c0_g1_i1...done
+	Loading TRINITY_DN329_c0_g1_i1...done
+	Loading TRINITY_DN341_c0_g1_i1...done
+	Loading TRINITY_DN342_c0_g1_i1...done
+	Loading TRINITY_DN305_c0_g1_i1...done
+	Loading TRINITY_DN331_c0_g1_i1...done
+	Loading TRINITY_DN340_c0_g1_i1...done
+	Loading TRINITY_DN304_c0_g1_i1...done
+	Loading TRINITY_DN314_c0_g1_i1...done
+	Loading TRINITY_DN319_c0_g1_i1...done
+	Loading TRINITY_DN339_c0_g1_i1...done
+	Loading TRINITY_DN300_c0_g1_i1...done
+	Loading TRINITY_DN332_c0_g1_i1...done
+	Loading TRINITY_DN303_c0_g1_i1...done
+	Loading TRINITY_DN321_c0_g1_i1...done
+	Loading TRINITY_DN324_c0_g1_i1...done
+	Loading TRINITY_DN323_c0_g1_i1...done
+	Loading TRINITY_DN333_c0_g1_i1...done
+	Loading TRINITY_DN344_c0_g1_i1...done
+	Loading TRINITY_DN327_c0_g1_i1...done
+	Loading TRINITY_DN326_c0_g1_i1...done
+	Loading TRINITY_DN335_c0_g1_i1...done
+	Loading TRINITY_DN307_c0_g1_i1...done
+	Loading TRINITY_DN337_c0_g1_i1...done
+	Loading TRINITY_DN301_c0_g1_i1...done
+	Loading TRINITY_DN328_c0_g1_i1...done
+	Loading TRINITY_DN317_c0_g1_i1...done
+	Loading TRINITY_DN316_c0_g1_i1...done
+	Loading TRINITY_DN346_c0_g1_i1...done
+	Loading TRINITY_DN315_c0_g1_i1...done
+	Loading TRINITY_DN312_c0_g1_i1...done
+	Loading TRINITY_DN330_c0_g1_i1...done
+	Loading TRINITY_DN345_c0_g1_i1...done
+	Loading TRINITY_DN338_c0_g1_i1...done
+	Loading TRINITY_DN311_c0_g1_i1...done
+	Loading TRINITY_DN302_c0_g1_i1...done
+	Loading TRINITY_DN180_c0_g1_i1...done
+	Loading TRINITY_DN150_c0_g1_i1...done
+	Loading TRINITY_DN165_c0_g1_i1...done
+	Loading TRINITY_DN189_c0_g1_i1...done
+	Loading TRINITY_DN103_c0_g1_i1...done
+	Loading TRINITY_DN146_c0_g1_i1...done
+	Loading TRINITY_DN167_c0_g1_i1...done
+	Loading TRINITY_DN110_c0_g1_i1...done
+	Loading TRINITY_DN111_c0_g1_i1...done
+	Loading TRINITY_DN186_c0_g1_i1...done
+	Loading TRINITY_DN135_c0_g1_i1...done
+	Loading TRINITY_DN156_c0_g1_i1...done
+	Loading TRINITY_DN118_c0_g1_i1...done
+	Loading TRINITY_DN175_c0_g1_i1...done
+	Loading TRINITY_DN100_c0_g1_i1...done
+	Loading TRINITY_DN196_c0_g1_i1...done
+	Loading TRINITY_DN168_c0_g1_i1...done
+	Loading TRINITY_DN185_c0_g1_i1...done
+	Loading TRINITY_DN155_c0_g1_i1...done
+	Loading TRINITY_DN176_c0_g1_i1...done
+	Loading TRINITY_DN131_c0_g1_i1...done
+	Loading TRINITY_DN149_c0_g1_i1...done
+	Loading TRINITY_DN115_c0_g1_i1...done
+	Loading TRINITY_DN116_c0_g1_i1...done
+	Loading TRINITY_DN197_c0_g1_i1...done
+	Loading TRINITY_DN109_c0_g1_i1...done
+	Loading TRINITY_DN177_c0_g1_i1...done
+	Loading TRINITY_DN148_c0_g1_i1...done
+	Loading TRINITY_DN140_c0_g1_i1...done
+	Loading TRINITY_DN113_c0_g1_i1...done
+	Loading TRINITY_DN195_c0_g1_i1...done
+	Loading TRINITY_DN172_c0_g1_i1...done
+	Loading TRINITY_DN192_c0_g1_i1...done
+	Loading TRINITY_DN145_c0_g1_i1...done
+	Loading TRINITY_DN166_c0_g1_i1...done
+	Loading TRINITY_DN117_c0_g1_i1...done
+	Loading TRINITY_DN119_c0_g1_i1...done
+	Loading TRINITY_DN199_c0_g1_i1...done
+	Loading TRINITY_DN198_c0_g1_i1...done
+	Loading TRINITY_DN183_c0_g1_i1...done
+	Loading TRINITY_DN153_c0_g1_i1...done
+	Loading TRINITY_DN162_c0_g1_i1...done
+	Loading TRINITY_DN164_c0_g1_i1...done
+	Loading TRINITY_DN173_c0_g1_i1...done
+	Loading TRINITY_DN105_c0_g1_i1...done
+	Loading TRINITY_DN136_c0_g1_i1...done
+	Loading TRINITY_DN130_c0_g1_i1...done
+	Loading TRINITY_DN170_c0_g1_i1...done
+	Loading TRINITY_DN193_c0_g1_i1...done
+	Loading TRINITY_DN171_c0_g1_i1...done
+	Loading TRINITY_DN190_c0_g1_i1...done
+	Loading TRINITY_DN126_c0_g1_i1...done
+	Loading TRINITY_DN191_c0_g1_i1...done
+	Loading TRINITY_DN128_c0_g1_i1...done
+	Loading TRINITY_DN114_c0_g1_i1...done
+	Loading TRINITY_DN194_c0_g1_i1...done
+	Loading TRINITY_DN147_c0_g1_i1...done
+	Loading TRINITY_DN154_c0_g1_i1...done
+	Loading TRINITY_DN129_c0_g1_i1...done
+	Loading TRINITY_DN178_c0_g1_i1...done
+	Loading TRINITY_DN127_c0_g1_i1...done
+	Loading TRINITY_DN132_c0_g1_i1...done
+	Loading TRINITY_DN144_c0_g1_i1...done
+	Loading TRINITY_DN182_c0_g1_i1...done
+	Loading TRINITY_DN187_c0_g1_i1...done
+	Loading TRINITY_DN142_c0_g1_i1...done
+	Loading TRINITY_DN101_c0_g1_i1...done
+	Loading TRINITY_DN107_c0_g1_i1...done
+	Loading TRINITY_DN141_c0_g1_i1...done
+	Loading TRINITY_DN151_c0_g1_i1...done
+	Loading TRINITY_DN160_c0_g1_i1...done
+	Loading TRINITY_DN161_c0_g1_i1...done
+	Loading TRINITY_DN152_c0_g1_i1...done
+	Loading TRINITY_DN104_c0_g1_i1...done
+	Loading TRINITY_DN122_c0_g1_i1...done
+	Loading TRINITY_DN138_c0_g1_i1...done
+	Loading TRINITY_DN184_c0_g1_i1...done
+	Loading TRINITY_DN133_c0_g1_i1...done
+	Loading TRINITY_DN106_c0_g1_i1...done
+	Loading TRINITY_DN159_c0_g1_i1...done
+	Loading TRINITY_DN121_c0_g1_i1...done
+	Loading TRINITY_DN163_c0_g1_i1...done
+	Loading TRINITY_DN123_c0_g1_i1...done
+	Loading TRINITY_DN174_c0_g1_i1...done
+	Loading TRINITY_DN188_c0_g1_i1...done
+	Loading TRINITY_DN112_c0_g1_i1...done
+	Loading TRINITY_DN120_c0_g1_i1...done
+	Loading TRINITY_DN137_c0_g1_i1...done
+	Loading TRINITY_DN108_c0_g1_i1...done
+	Loading TRINITY_DN139_c0_g1_i1...done
+	Loading TRINITY_DN158_c0_g1_i1...done
+	Loading TRINITY_DN179_c0_g1_i1...done
+	Loading TRINITY_DN143_c0_g1_i1...done
+	Loading TRINITY_DN124_c0_g1_i1...done
+	Loading TRINITY_DN102_c0_g1_i1...done
+	Loading TRINITY_DN134_c0_g1_i1...done
+	Loading TRINITY_DN169_c0_g1_i1...done
+	Loading TRINITY_DN157_c0_g1_i1...done
+	Loading TRINITY_DN125_c0_g1_i1...done
+	Loading TRINITY_DN181_c0_g1_i1...done
+	Loading TRINITY_DN232_c0_g1_i1...done
+	Loading TRINITY_DN208_c0_g1_i1...done
+	Loading TRINITY_DN250_c0_g1_i1...done
+	Loading TRINITY_DN253_c0_g1_i1...done
+	Loading TRINITY_DN219_c0_g1_i1...done
+	Loading TRINITY_DN255_c0_g1_i1...done
+	Loading TRINITY_DN275_c0_g1_i1...done
+	Loading TRINITY_DN266_c0_g1_i1...done
+	Loading TRINITY_DN218_c0_g1_i1...done
+	Loading TRINITY_DN200_c0_g1_i1...done
+	Loading TRINITY_DN269_c0_g1_i1...done
+	Loading TRINITY_DN245_c0_g1_i1...done
+	Loading TRINITY_DN220_c0_g1_i1...done
+	Loading TRINITY_DN262_c0_g1_i1...done
+	Loading TRINITY_DN233_c0_g1_i1...done
+	Loading TRINITY_DN270_c0_g1_i1...done
+	Loading TRINITY_DN271_c0_g1_i1...done
+	Loading TRINITY_DN227_c0_g1_i1...done
+	Loading TRINITY_DN223_c0_g1_i1...done
+	Loading TRINITY_DN295_c0_g1_i1...done
+	Loading TRINITY_DN246_c0_g1_i1...done
+	Loading TRINITY_DN239_c0_g1_i1...done
+	Loading TRINITY_DN240_c0_g1_i1...done
+	Loading TRINITY_DN260_c0_g1_i1...done
+	Loading TRINITY_DN213_c0_g1_i1...done
+	Loading TRINITY_DN293_c0_g1_i1...done
+	Loading TRINITY_DN254_c0_g1_i1...done
+	Loading TRINITY_DN264_c0_g1_i1...done
+	Loading TRINITY_DN211_c0_g1_i1...done
+	Loading TRINITY_DN272_c0_g1_i1...done
+	Loading TRINITY_DN214_c0_g1_i1...done
+	Loading TRINITY_DN242_c0_g1_i1...done
+	Loading TRINITY_DN268_c0_g1_i1...done
+	Loading TRINITY_DN277_c0_g1_i1...done
+	Loading TRINITY_DN280_c0_g1_i1...done
+	Loading TRINITY_DN287_c0_g1_i1...done
+	Loading TRINITY_DN285_c0_g1_i1...done
+	Loading TRINITY_DN228_c0_g1_i1...done
+	Loading TRINITY_DN215_c0_g1_i1...done
+	Loading TRINITY_DN299_c0_g1_i1...done
+	Loading TRINITY_DN292_c0_g1_i1...done
+	Loading TRINITY_DN210_c0_g1_i1...done
+	Loading TRINITY_DN256_c0_g1_i1...done
+	Loading TRINITY_DN212_c0_g1_i1...done
+	Loading TRINITY_DN286_c0_g1_i1...done
+	Loading TRINITY_DN263_c0_g1_i1...done
+	Loading TRINITY_DN222_c0_g1_i1...done
+	Loading TRINITY_DN289_c0_g1_i1...done
+	Loading TRINITY_DN226_c0_g1_i1...done
+	Loading TRINITY_DN274_c0_g1_i1...done
+	Loading TRINITY_DN259_c0_g1_i1...done
+	Loading TRINITY_DN267_c0_g1_i1...done
+	Loading TRINITY_DN248_c0_g1_i1...done
+	Loading TRINITY_DN217_c0_g1_i1...done
+	Loading TRINITY_DN216_c0_g1_i1...done
+	Loading TRINITY_DN225_c0_g1_i1...done
+	Loading TRINITY_DN288_c0_g1_i1...done
+	Loading TRINITY_DN294_c0_g1_i1...done
+	Loading TRINITY_DN201_c0_g1_i1...done
+	Loading TRINITY_DN298_c0_g1_i1...done
+	Loading TRINITY_DN247_c0_g1_i1...done
+	Loading TRINITY_DN209_c0_g1_i1...done
+	Loading TRINITY_DN297_c0_g1_i1...done
+	Loading TRINITY_DN202_c0_g1_i1...done
+	Loading TRINITY_DN283_c0_g1_i1...done
+	Loading TRINITY_DN231_c0_g1_i1...done
+	Loading TRINITY_DN238_c0_g1_i1...done
+	Loading TRINITY_DN249_c0_g1_i1...done
+	Loading TRINITY_DN276_c0_g1_i1...done
+	Loading TRINITY_DN257_c0_g1_i1...done
+	Loading TRINITY_DN273_c0_g1_i1...done
+	Loading TRINITY_DN261_c0_g1_i1...done
+	Loading TRINITY_DN229_c0_g1_i1...done
+	Loading TRINITY_DN291_c0_g1_i1...done
+	Loading TRINITY_DN205_c0_g1_i1...done
+	Loading TRINITY_DN251_c0_g1_i1...done
+	Loading TRINITY_DN278_c0_g1_i1...done
+	Loading TRINITY_DN284_c0_g1_i1...done
+	Loading TRINITY_DN221_c0_g1_i1...done
+	Loading TRINITY_DN241_c0_g1_i1...done
+	Loading TRINITY_DN206_c0_g1_i1...done
+	Loading TRINITY_DN281_c0_g1_i1...done
+	Loading TRINITY_DN237_c0_g1_i1...done
+	Loading TRINITY_DN236_c0_g1_i1...done
+	Loading TRINITY_DN258_c0_g1_i1...done
+	Loading TRINITY_DN244_c0_g1_i1...done
+	Loading TRINITY_DN235_c0_g1_i1...done
+	Loading TRINITY_DN207_c0_g1_i1...done
+	Loading TRINITY_DN279_c0_g1_i1...done
+	Loading TRINITY_DN234_c0_g1_i1...done
+	Loading TRINITY_DN282_c0_g1_i1...done
+	Loading TRINITY_DN265_c0_g1_i1...done
+	Loading TRINITY_DN296_c0_g1_i1...done
+	Loading TRINITY_DN204_c0_g1_i1...done
+	Loading TRINITY_DN224_c0_g1_i1...done
+	Loading TRINITY_DN290_c0_g1_i1...done
+	Loading TRINITY_DN243_c0_g1_i1...done
+	Loading TRINITY_DN230_c0_g1_i1...done
+	Loading TRINITY_DN252_c0_g1_i1...done
+	Loading TRINITY_DN76_c0_g1_i1...done
+	Loading TRINITY_DN18_c0_g1_i1...done
+	Loading TRINITY_DN18_c0_g2_i1...done
+	Loading TRINITY_DN65_c0_g1_i1...done
+	Loading TRINITY_DN93_c0_g1_i1...done
+	Loading TRINITY_DN16_c0_g1_i1...done
+	Loading TRINITY_DN92_c0_g1_i1...done
+	Loading TRINITY_DN84_c0_g1_i1...done
+	Loading TRINITY_DN2_c0_g1_i1...done
+	Loading TRINITY_DN2_c0_g2_i1...done
+	Loading TRINITY_DN68_c0_g1_i1...done
+	Loading TRINITY_DN48_c0_g1_i1...done
+	Loading TRINITY_DN50_c0_g1_i1...done
+	Loading TRINITY_DN79_c0_g1_i1...done
+	Loading TRINITY_DN80_c0_g1_i1...done
+	Loading TRINITY_DN62_c0_g1_i1...done
+	Loading TRINITY_DN35_c0_g1_i1...done
+	Loading TRINITY_DN87_c0_g1_i1...done
+	Loading TRINITY_DN56_c0_g1_i1...done
+	Loading TRINITY_DN0_c0_g1_i1...done
+	Loading TRINITY_DN0_c0_g2_i1...done
+	Loading TRINITY_DN6_c0_g1_i1...done
+	Loading TRINITY_DN6_c0_g2_i1...done
+	Loading TRINITY_DN10_c0_g1_i1...done
+	Loading TRINITY_DN10_c0_g2_i1...done
+	Loading TRINITY_DN38_c0_g1_i1...done
+	Loading TRINITY_DN38_c0_g2_i1...done
+	Loading TRINITY_DN32_c0_g1_i1...done
+	Loading TRINITY_DN32_c0_g2_i1...done
+	Loading TRINITY_DN49_c0_g1_i1...done
+	Loading TRINITY_DN99_c0_g1_i1...done
+	Loading TRINITY_DN88_c0_g1_i1...done
+	Loading TRINITY_DN31_c0_g1_i1...done
+	Loading TRINITY_DN23_c0_g1_i1...done
+	Loading TRINITY_DN23_c0_g2_i1...done
+	Loading TRINITY_DN46_c0_g1_i1...done
+	Loading TRINITY_DN46_c0_g1_i2...done
+	Loading TRINITY_DN46_c0_g1_i3...done
+	Loading TRINITY_DN46_c0_g1_i4...done
+	Loading TRINITY_DN46_c0_g1_i5...done
+	Loading TRINITY_DN61_c0_g1_i1...done
+	Loading TRINITY_DN58_c0_g1_i1...done
+	Loading TRINITY_DN45_c0_g1_i1...done
+	Loading TRINITY_DN40_c0_g1_i1...done
+	Loading TRINITY_DN40_c0_g1_i2...done
+	Loading TRINITY_DN63_c0_g1_i1...done
+	Loading TRINITY_DN71_c0_g1_i1...done
+	Loading TRINITY_DN30_c0_g1_i1...done
+	Loading TRINITY_DN30_c0_g2_i1...done
+	Loading TRINITY_DN43_c0_g1_i1...done
+	Loading TRINITY_DN43_c0_g2_i1...done
+	Loading TRINITY_DN7_c0_g1_i1...done
+	Loading TRINITY_DN37_c0_g1_i1...done
+	Loading TRINITY_DN37_c0_g1_i2...done
+	Loading TRINITY_DN69_c0_g1_i1...done
+	Loading TRINITY_DN55_c0_g1_i1...done
+	Loading TRINITY_DN8_c0_g1_i1...done
+	Loading TRINITY_DN8_c0_g2_i1...done
+	Loading TRINITY_DN74_c0_g1_i1...done
+	Loading TRINITY_DN90_c0_g1_i1...done
+	Loading TRINITY_DN25_c0_g1_i1...done
+	Loading TRINITY_DN25_c0_g2_i1...done
+	Loading TRINITY_DN22_c0_g1_i1...done
+	Loading TRINITY_DN22_c0_g2_i1...done
+	Loading TRINITY_DN91_c0_g1_i1...done
+	Loading TRINITY_DN54_c0_g1_i1...done
+	Loading TRINITY_DN19_c0_g1_i1...done
+	Loading TRINITY_DN19_c0_g2_i1...done
+	Loading TRINITY_DN26_c0_g1_i1...done
+	Loading TRINITY_DN67_c0_g1_i1...done
+	Loading TRINITY_DN14_c0_g1_i1...done
+	Loading TRINITY_DN94_c0_g1_i1...done
+	Loading TRINITY_DN86_c0_g1_i1...done
+	Loading TRINITY_DN83_c0_g1_i1...done
+	Loading TRINITY_DN12_c0_g1_i1...done
+	Loading TRINITY_DN60_c0_g1_i1...done
+	Loading TRINITY_DN82_c0_g1_i1...done
+	Loading TRINITY_DN20_c0_g1_i1...done
+	Loading TRINITY_DN47_c0_g1_i1...done
+	Loading TRINITY_DN4_c0_g1_i1...done
+	Loading TRINITY_DN4_c0_g2_i1...done
+	Loading TRINITY_DN85_c0_g1_i1...done
+	Loading TRINITY_DN51_c0_g1_i1...done
+	Loading TRINITY_DN24_c0_g1_i1...done
+	Loading TRINITY_DN24_c0_g2_i1...done
+	Loading TRINITY_DN89_c0_g1_i1...done
+	Loading TRINITY_DN97_c0_g1_i1...done
+	Loading TRINITY_DN34_c0_g1_i1...done
+	Loading TRINITY_DN34_c0_g2_i1...done
+	Loading TRINITY_DN29_c0_g1_i1...done
+	Loading TRINITY_DN29_c0_g2_i1...done
+	Loading TRINITY_DN5_c0_g1_i1...done
+	Loading TRINITY_DN5_c0_g2_i1...done
+	Loading TRINITY_DN42_c0_g1_i1...done
+	Loading TRINITY_DN42_c0_g1_i2...done
+	Loading TRINITY_DN78_c0_g1_i1...done
+	Loading TRINITY_DN81_c0_g1_i1...done
+	Loading TRINITY_DN33_c0_g1_i1...done
+	Loading TRINITY_DN28_c0_g1_i1...done
+	Loading TRINITY_DN28_c0_g2_i1...done
+	Loading TRINITY_DN39_c0_g1_i1...done
+	Loading TRINITY_DN15_c0_g1_i1...done
+	Loading TRINITY_DN95_c0_g1_i1...done
+	Loading TRINITY_DN73_c0_g1_i1...done
+	Loading TRINITY_DN75_c0_g1_i1...done
+	Loading TRINITY_DN98_c0_g1_i1...done
+	Loading TRINITY_DN77_c0_g1_i1...done
+	Loading TRINITY_DN59_c0_g1_i1...done
+	Loading TRINITY_DN17_c0_g1_i1...done
+	Loading TRINITY_DN17_c0_g2_i1...done
+	Loading TRINITY_DN64_c0_g1_i1...done
+	Loading TRINITY_DN21_c0_g1_i1...done
+	Loading TRINITY_DN21_c0_g2_i1...done
+	Loading TRINITY_DN66_c0_g1_i1...done
+	Loading TRINITY_DN1_c0_g1_i1...done
+	Loading TRINITY_DN1_c0_g2_i1...done
+	Loading TRINITY_DN72_c0_g1_i1...done
+	Loading TRINITY_DN27_c0_g1_i1...done
+	Loading TRINITY_DN57_c0_g1_i1...done
+	Loading TRINITY_DN70_c0_g1_i1...done
+	Loading TRINITY_DN9_c0_g1_i1...done
+	Loading TRINITY_DN9_c0_g2_i1...done
+	Loading TRINITY_DN3_c0_g1_i1...done
+	Loading TRINITY_DN3_c0_g2_i1...done
+	Loading TRINITY_DN44_c0_g1_i1...done
+	Loading TRINITY_DN44_c0_g2_i1...done
+	Loading TRINITY_DN13_c0_g1_i1...done
+	Loading TRINITY_DN41_c0_g1_i1...done
+	Loading TRINITY_DN41_c0_g2_i1...done
+	Loading TRINITY_DN41_c0_g3_i1...done
+	Loading TRINITY_DN11_c0_g1_i1...done
+	Loading TRINITY_DN11_c0_g2_i1...done
+	Loading TRINITY_DN96_c0_g1_i1...done
+	Loading TRINITY_DN53_c0_g1_i1...done
+	Loading TRINITY_DN52_c0_g1_i1...done
+	Loading TRINITY_DN36_c0_g1_i1...done
+	Loading ...done
+>> Performing segment-search:
+Loading left segment hits...
+done.
+Loading right segment hits...
+done.
+	found 2 potential split-segment junctions
+	found 0 potential small deletions
+	found 0 potential small insertions
+>> Performing coverage-search:
+ Map covers 21115 bases
+ Map covers 20745 bases in sufficiently long segments
+ Map contains 365 good islands
+ 17296 are left looking bases
+ 11761 are right looking bases
+Collecting potential splice sites in islands
+reporting synthetic splice junctions...
+Examining donor-acceptor pairings in TRINITY_DN100_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN103_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN107_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN108_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN109_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN112_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN117_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN11_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN11_c0_g2_i1
+Examining donor-acceptor pairings in TRINITY_DN124_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN125_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN127_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN12_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN130_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN133_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN13_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN145_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN152_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN153_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN16_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN170_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN184_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN189_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN18_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN18_c0_g2_i1
+Examining donor-acceptor pairings in TRINITY_DN199_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN19_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN204_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN208_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN213_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN215_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN216_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN221_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN222_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN224_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN232_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN233_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN234_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN235_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN236_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN239_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN240_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN243_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN246_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN248_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN251_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN252_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN255_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN25_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN25_c0_g2_i1
+Examining donor-acceptor pairings in TRINITY_DN261_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN269_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN26_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN273_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN275_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN276_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN277_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN279_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN280_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN283_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN287_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN290_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN293_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN294_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN295_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN2_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN2_c0_g2_i1
+Examining donor-acceptor pairings in TRINITY_DN301_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN309_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN329_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN32_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN32_c0_g2_i1
+Examining donor-acceptor pairings in TRINITY_DN333_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN337_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN33_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN34_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN34_c0_g2_i1
+Examining donor-acceptor pairings in TRINITY_DN35_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN37_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN37_c0_g1_i2
+Examining donor-acceptor pairings in TRINITY_DN39_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN3_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN41_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN41_c0_g2_i1
+Examining donor-acceptor pairings in TRINITY_DN41_c0_g3_i1
+Examining donor-acceptor pairings in TRINITY_DN43_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN43_c0_g2_i1
+Examining donor-acceptor pairings in TRINITY_DN45_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN46_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN46_c0_g1_i2
+Examining donor-acceptor pairings in TRINITY_DN46_c0_g1_i3
+Examining donor-acceptor pairings in TRINITY_DN46_c0_g1_i4
+Examining donor-acceptor pairings in TRINITY_DN46_c0_g1_i5
+Examining donor-acceptor pairings in TRINITY_DN48_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN4_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN4_c0_g2_i1
+Examining donor-acceptor pairings in TRINITY_DN51_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN52_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN55_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN56_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN61_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN62_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN63_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN64_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN68_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN6_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN6_c0_g2_i1
+Examining donor-acceptor pairings in TRINITY_DN70_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN82_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN85_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN87_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN90_c0_g1_i1
+Examining donor-acceptor pairings in TRINITY_DN94_c0_g1_i1
+	found 0 potential junctions
+Reported 2 total potential splices
+Reporting 0 potential deletions...
+Reporting 0 potential insertions...
+Reporting potential fusions...

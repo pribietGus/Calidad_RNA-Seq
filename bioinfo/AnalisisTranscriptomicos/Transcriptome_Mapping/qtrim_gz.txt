@@ -1,0 +1,16 @@
+Sp_ds.left.fq.gz.P.qtrim.gz
+Sp_ds.left.fq.gz.U.qtrim.gz
+Sp_ds.right.fq.gz.P.qtrim.gz
+Sp_ds.right.fq.gz.U.qtrim.gz
+Sp_hs.left.fq.gz.P.qtrim.gz
+Sp_hs.left.fq.gz.U.qtrim.gz
+Sp_hs.right.fq.gz.P.qtrim.gz
+Sp_hs.right.fq.gz.U.qtrim.gz
+Sp_log.left.fq.gz.P.qtrim.gz
+Sp_log.left.fq.gz.U.qtrim.gz
+Sp_log.right.fq.gz.P.qtrim.gz
+Sp_log.right.fq.gz.U.qtrim.gz
+Sp_plat.left.fq.gz.P.qtrim.gz
+Sp_plat.left.fq.gz.U.qtrim.gz
+Sp_plat.right.fq.gz.P.qtrim.gz
+Sp_plat.right.fq.gz.U.qtrim.gz
