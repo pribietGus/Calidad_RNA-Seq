@@ -8,4 +8,8 @@
 ### Sp_log.right.fq.gz.P.qtrim.gz,Sp_hs.right.fq.gz.P.qtrim.gz,Sp_ds.right.fq.gz.P.qtrim.gz,Sp_plat.right.fq.gz.P.qtrim.gz ###  MOLDE
 
 tophat2 -I 300 -i 20 Trinity_transcriptome \
+/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/*.left.fq.gz.P.qtrim.gz \
+/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/*.right.fq.gz.P.qtrim.gz
+
+MAnual TopHat https://ccb.jhu.edu/software/tophat/manual.shtml
 
