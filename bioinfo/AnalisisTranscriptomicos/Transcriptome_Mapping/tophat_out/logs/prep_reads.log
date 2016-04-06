@@ -1,6 +1,4 @@
 prep_reads v2.0.9 ()
 ---------------------------
-WARNING: read pairing issues detected (check prep_reads.log) !
- Pair #1 name mismatch: 61G9EAAXX100520:5:100:10001:20086/1 vs 61G9EAAXX100520:5:100:10004:15548/1
-66 out of 96471 reads have been filtered out
-152 out of 102526 read mates have been filtered out
+431 out of 329886 reads have been filtered out
+161 out of 329886 read mates have been filtered out

@@ -385,8 +385,8 @@ tophat_reports v2.0.9 ()
 	Loading TRINITY_DN52_c0_g1_i1...done
 	Loading TRINITY_DN36_c0_g1_i1...done
 	Loading ...done
-Loaded 2 junctions
+Loaded 0 junctions
 Printing junction BED track...done
 Printing insertions...done
 Printing deletions...done
-Found 2 junctions from happy spliced reads
+Found 0 junctions from happy spliced reads

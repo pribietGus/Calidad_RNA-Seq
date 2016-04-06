@@ -1,40 +1,18 @@
 
-[2016-04-04 23:25:59] Beginning TopHat run (v2.0.9)
+[2016-04-05 19:38:50] Beginning TopHat run (v2.0.9)
 -----------------------------------------------
-[2016-04-04 23:25:59] Checking for Bowtie
+[2016-04-05 19:38:50] Checking for Bowtie
 		  Bowtie version:	 2.1.0.0
-[2016-04-04 23:25:59] Checking for Samtools
+[2016-04-05 19:38:50] Checking for Samtools
 		Samtools version:	 0.1.19.0
-[2016-04-04 23:25:59] Checking for Bowtie index files (genome)..
-[2016-04-04 23:25:59] Checking for reference FASTA file
+[2016-04-05 19:38:50] Checking for Bowtie index files (genome)..
+[2016-04-05 19:38:50] Checking for reference FASTA file
 	Warning: Could not find FASTA file Trinity_transcriptome.fa
-[2016-04-04 23:25:59] Reconstituting reference FASTA file from Bowtie index
+[2016-04-05 19:38:50] Reconstituting reference FASTA file from Bowtie index
   Executing: /usr/bin/bowtie2-inspect Trinity_transcriptome > ./tophat_out/tmp/Trinity_transcriptome.fa
-[2016-04-04 23:25:59] Generating SAM header for Trinity_transcriptome
+[2016-04-05 19:38:50] Generating SAM header for Trinity_transcriptome
 	format:		 fastq
 	quality scale:	 phred33 (default)
-[2016-04-04 23:26:00] Preparing reads
-
-WARNING: read pairing issues detected (check prep_reads.log) !
-
-	 left reads: min. length=25, max. length=68, 96405 kept reads (66 discarded)
-	right reads: min. length=25, max. length=68, 102374 kept reads (152 discarded)
-[2016-04-04 23:26:04] Mapping left_kept_reads to genome Trinity_transcriptome with Bowtie2 
-[2016-04-04 23:26:12] Mapping left_kept_reads_seg1 to genome Trinity_transcriptome with Bowtie2 (1/2)
-[2016-04-04 23:26:12] Mapping left_kept_reads_seg2 to genome Trinity_transcriptome with Bowtie2 (2/2)
-[2016-04-04 23:26:12] Mapping right_kept_reads to genome Trinity_transcriptome with Bowtie2 
-[2016-04-04 23:26:21] Mapping right_kept_reads_seg1 to genome Trinity_transcriptome with Bowtie2 (1/2)
-[2016-04-04 23:26:21] Mapping right_kept_reads_seg2 to genome Trinity_transcriptome with Bowtie2 (2/2)
-[2016-04-04 23:26:22] Searching for junctions via segment mapping
-[2016-04-04 23:26:25] Retrieving sequences for splices
-[2016-04-04 23:26:25] Indexing splices
-[2016-04-04 23:26:25] Mapping left_kept_reads_seg1 to genome segment_juncs with Bowtie2 (1/2)
-[2016-04-04 23:26:26] Mapping left_kept_reads_seg2 to genome segment_juncs with Bowtie2 (2/2)
-[2016-04-04 23:26:26] Joining segment hits
-[2016-04-04 23:26:26] Mapping right_kept_reads_seg1 to genome segment_juncs with Bowtie2 (1/2)
-[2016-04-04 23:26:27] Mapping right_kept_reads_seg2 to genome segment_juncs with Bowtie2 (2/2)
-[2016-04-04 23:26:27] Joining segment hits
-[2016-04-04 23:26:28] Reporting output tracks
------------------------------------------------
-[2016-04-04 23:26:45] A summary of the alignment counts can be found in ./tophat_out/align_summary.txt
-[2016-04-04 23:26:45] Run complete: 00:00:46 elapsed
+[2016-04-05 19:38:50] Preparing reads
+	[FAILED]
+Error retrieving prep_reads info.
