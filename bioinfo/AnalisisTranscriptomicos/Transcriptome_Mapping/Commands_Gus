@@ -1,5 +1,6 @@
 #COMANDO PARA BOWTIE2
 ####/home/gus/Git/Ensamble_RNA-Seq/bowtie2-2.1.0/bowtie2.pl bowtie2-build Trinity.fasta Trinity_transcriptome #### No sirve 
+-Indices de transcriptoma
 /home/gus/Git/Ensamble_RNA-Seq/bowtie2-2.1.0/bowtie2-build Trinity.fasta Trinity_transcriptome 
 
 #Ahora TOPHAT2
@@ -10,6 +11,18 @@
 tophat2 -I 300 -i 20 Trinity_transcriptome \
 /home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/*.left.fq.gz.P.qtrim.gz \
 /home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/*.right.fq.gz.P.qtrim.gz
+
+-Para transcriptoma tophat2
+tophat2 -T Trinity_transcriptome \
+/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/*.left.fq.gz.P.qtrim.gz \
+/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/*.right.fq.gz.P.qtrim.gz
+
+-Para transcriptoma tophat2: usando path completo
+tophat2 -T Trinity_transcriptome \
+/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/Sp_ds.left.fq.gz.P.qtrim.gz,/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/Sp_hs.left.fq.gz.P.qtrim.gz,/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/Sp_log.left.fq.gz.P.qtrim.gz,/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/Sp_plat.left.fq.gz.P.qtrim.gz \
+/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/Sp_ds.right.fq.gz.P.qtrim.gz,/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/Sp_hs.right.fq.gz.P.qtrim.gz,/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/Sp_log.right.fq.gz.P.qtrim.gz,/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/Sp_plat.right.fq.gz.P.qtrim.gz 
+
+
 
 MAnual TopHat https://ccb.jhu.edu/software/tophat/manual.shtml
 
