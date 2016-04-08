@@ -1,1 +1,26 @@
-Hola mundo
+####    EN ESTOS COMANDOS LA DIRECCIÓN DE GUARDADO DE LOS DOCUMENTOS ES LA DIRECCIÓN EN MI RESPOSITORIO DONDE SE PUEDE ENCONTRAR ####
+####    EL BULK DE ARCHIVOS QUE GENERA                                                                                           ####
+#COMANDO PARA BOWTIE2
+####/home/gus/Git/Ensamble_RNA-Seq/bowtie2-2.1.0/bowtie2.pl bowtie2-build Trinity.fasta Trinity_transcriptome #### No sirve 
+-Indices de transcriptoma
+/home/gus/Git/Ensamble_RNA-Seq/bowtie2-2.1.0/bowtie2-build Trinity.fasta Trinity_transcriptome 
+
+#Ahora TOPHAT2
+###tophat2 -I 300 -i 20 Sp_genome \### MOLDE
+### Sp_log.left.fq.gz.P.qtrim.gz,Sp_hs.left.fq.gz.P.qtrim.gz,Sp_ds.left.fq.gz.P.qtrim.gz,Sp_plat.left.fq.gz.P.qtrim.gz \### MOLDE
+### Sp_log.right.fq.gz.P.qtrim.gz,Sp_hs.right.fq.gz.P.qtrim.gz,Sp_ds.right.fq.gz.P.qtrim.gz,Sp_plat.right.fq.gz.P.qtrim.gz ###  MOLDE
+###tophat2 -I 300 -i 20 Trinity_transcriptome \ ### MOLDE
+###/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/*.left.fq.gz.P.qtrim.gz \ ### MOLDE
+###/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/*.right.fq.gz.P.qtrim.gz ### MOLDE
+
+### EL SIGUIENTE COMANDO GENERA UN ERROR LLAMADO "error retrieving prep_reads info"   ###
+###Para transcriptoma tophat2  ####
+tophat2 -T Trinity_transcriptome \
+/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/*.left.fq.gz.P.qtrim.gz \
+/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/*.right.fq.gz.P.qtrim.gz
+
+### EL SIGUIENTE COMANDO NO GENERA NINGUN ERROR ###
+### Para transcriptoma tophat2: usando path completo se eliminia el error antes descrito ###
+tophat2 -T Trinity_transcriptome \
+/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/Sp_ds.left.fq.gz.P.qtrim.gz,/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/Sp_hs.left.fq.gz.P.qtrim.gz,/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/Sp_log.left.fq.gz.P.qtrim.gz,/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/Sp_plat.left.fq.gz.P.qtrim.gz \
+/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/Sp_ds.right.fq.gz.P.qtrim.gz,/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/Sp_hs.right.fq.gz.P.qtrim.gz,/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/Sp_log.right.fq.gz.P.qtrim.gz,/home/gus/Calidad_RNA-Seq/bioinfo/AnalisisTranscriptomicos/RNA_Seq_Map/Trinity_out_dir/Sp_plat.right.fq.gz.P.qtrim.gz 
